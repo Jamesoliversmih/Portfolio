@@ -51,15 +51,17 @@ export default function Hero() {
             James Oliver Smith
           </motion.h1>
           <motion.p
-            variants={sequence}
-            transition={{ duration: 0.5 }}
-            className="mt-6 max-w-[46ch] text-lg leading-relaxed text-muted"
-          >
-            I keep people's systems running and I build the software behind
-            them. Six months resolving help desk tickets, managing Microsoft
-            365 and Google Workspace accounts, and now shipping full-stack
-            projects with Go, Next.js, and PostgreSQL.
-          </motion.p>
+  variants={sequence}
+  transition={{ duration: 0.5 }}
+  className="mt-6 max-w-[46ch] text-lg leading-relaxed text-muted"
+>
+  I keep people's systems running and I build the software behind
+  them. I've resolved help desk tickets, managed user accounts and
+  security across Microsoft 365 and Google Workspace, and led
+  onboarding and offboarding from end to end — and I bring that
+  same troubleshooting mindset to building full-stack applications
+  with Go, Next.js, and PostgreSQL.
+</motion.p>
           <motion.div
             variants={sequence}
             transition={{ duration: 0.5 }}
