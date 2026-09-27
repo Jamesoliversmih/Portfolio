@@ -60,3 +60,4 @@ The easiest path is [Vercel](https://vercel.com): push this to a GitHub repo and
 ## Note on dependencies
 
 This scaffold uses Next.js 14.2.34, the latest patched release in the 14.x line as of this build. Before deploying, run `npm outdated` and update to the latest stable Next.js release to pick up any newer security fixes.
+
