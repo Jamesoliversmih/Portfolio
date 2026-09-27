@@ -2,6 +2,14 @@ import TiltCard from "./TiltCard";
 
 const projects = [
   {
+    name: "Asset & Onboarding Tracker",
+    role: "Personal Project",
+    description:
+      "A full-stack internal tool for tracking employee onboarding, offboarding, and IT asset assignments — mirroring the real account, license, and hardware workflows handled at AngkolTech.",
+    stack: ["Next.js", "PostgreSQL", "Prisma", "Server Actions"],
+    url: "https://github.com/Jamesoliversmih/asset-onboarding-tracker",
+  },
+  {
     name: "BudgetLens AI",
     role: "Capstone Project",
     description:
@@ -16,6 +24,28 @@ const projects = [
     stack: ["Frontend", "Backend", "Database Design"],
   },
 ];
+
+function ProjectTitle({ project }: { project: (typeof projects)[number] }) {
+  if (!project.url) {
+    return (
+      <h3 className="mt-3 text-xl font-semibold tracking-tight text-ink">
+        {project.name}
+      </h3>
+    );
+  }
+  return (
+    <h3 className="mt-3 text-xl font-semibold tracking-tight text-ink">
+      <a
+        href={project.url}
+        target="_blank"
+        rel="noreferrer"
+        className="transition-colors hover:text-accent"
+      >
+        {project.name} ↗
+      </a>
+    </h3>
+  );
+}
 
 export default function Projects() {
   return (
@@ -32,9 +62,7 @@ export default function Projects() {
               className="rounded-2xl border border-line bg-paper p-8"
             >
               <p className="font-mono text-xs text-accent">{project.role}</p>
-              <h3 className="mt-3 text-xl font-semibold tracking-tight text-ink">
-                {project.name}
-              </h3>
+              <ProjectTitle project={project} />
               <p className="mt-4 text-sm leading-relaxed text-muted">
                 {project.description}
               </p>
